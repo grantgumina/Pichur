@@ -17,7 +17,7 @@
 		<ribbon:Ribbon x:Name="Ribbon" Margin="-1,-40,1,5" Height="174" Grid.ColumnSpan="2">
             <ribbon:Ribbon.ApplicationMenu>
 				<ribbon:RibbonApplicationMenu Visibility="Collapsed" SmallImageSource="Images\SmallIcon.png">
-					<ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"
+					<ribbon:RibbonApplicationMenuItem Header="App Menu"
                                                       x:Name="MenuItem1"
                                                       ImageSource="Images\LargeIcon.png"
 													  />
@@ -34,9 +34,11 @@
 								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
 								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
 								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
 							</ribbon:RibbonGroupSizeDefinition>
 						</ribbon:RibbonGroupSizeDefinitionBaseCollection>
 					</ribbon:RibbonGroup.GroupSizeDefinitions>
+					<ribbon:RibbonButton x:Name="e0RibBtn" LargeImageSource="Images\cancel.png" Label="None" Click="e0RibBtn_Click" />
 					<ribbon:RibbonButton x:Name="e1RibBtn" LargeImageSource="Images\Effects\Grayscale.png" Label="B/W" Click="e1RibBtn_Click" />
 					<ribbon:RibbonButton x:Name="e9RibBtn" LargeImageSource="Images\Effects\OldMovie.png" Label="Old Movie" Click="e9RibBtn_Click" />
 				</ribbon:RibbonGroup>

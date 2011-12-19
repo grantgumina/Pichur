@@ -29,12 +29,6 @@ namespace Pichur
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			// get list of albums
-			//var fb = new FacebookClient(token);
-			//dynamic albums = fb.Get("me/albums");
-			//foreach (dynamic a in albums.data)
-			//{
-			//}
 		}
 
 		private void browseBtn_Click(object sender, RoutedEventArgs e)
@@ -76,5 +70,11 @@ namespace Pichur
 			}
 		}
 
+		private void logoutBtn_Click(object sender, RoutedEventArgs e)
+		{
+			FacebookWindow logoutWindow = new FacebookWindow();
+			logoutWindow.Show();
+			this.Close();
+		}
 	}
 }

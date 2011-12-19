@@ -1,17 +1,17 @@
 ﻿<Window x:Class="Pichur.FacebookUpload"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FacebookUpload" Height="422" Width="287" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="FacebookUpload" Height="425" Width="287" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="37*" />
 			<RowDefinition Height="247*" />
 		</Grid.RowDefinitions>
-		<TextBox Height="23" HorizontalAlignment="Left" Margin="12,26,0,0" Name="pathTxt" VerticalAlignment="Top" Width="161" Grid.RowSpan="2" />
-		<Button Content="Browse" Height="23" HorizontalAlignment="Right" Margin="0,25,13,0" Name="browseBtn" VerticalAlignment="Top" Width="75" Click="browseBtn_Click" Grid.RowSpan="2" />
-		<Button Content="Upload" Height="23" HorizontalAlignment="Center" Margin="12,302,10,0" Name="uploadBtn" VerticalAlignment="Top" Width="243" Click="uploadBtn_Click" Grid.Row="1" />
-		<Image Height="181" HorizontalAlignment="Left" Margin="12,2,0,0" Name="previewImg" Stretch="Uniform" VerticalAlignment="Top" Width="243" Grid.Row="1" Source="/Pichur;component/Images/noimage.jpg" />
-		<GroupBox Grid.Row="1" Header="Properties" Height="107" HorizontalAlignment="Left" Margin="12,189,0,0" Name="imagePropsGBx" VerticalAlignment="Top" Width="243">
+		<TextBox Height="23" HorizontalAlignment="Left" Margin="12,26,0,0" Name="pathTxt" VerticalAlignment="Top" Width="161" />
+		<Button Content="Browse" Height="23" HorizontalAlignment="Right" Margin="0,25,10,0" Name="browseBtn" VerticalAlignment="Top" Width="75" Click="browseBtn_Click" />
+		<Button Content="Upload" Height="23" HorizontalAlignment="Center" Margin="12,301,10,0" Name="uploadBtn" VerticalAlignment="Top" Width="243" Click="uploadBtn_Click" Grid.Row="1" />
+		<Image Height="181" HorizontalAlignment="Left" Margin="12,1,0,0" Name="previewImg" Stretch="Uniform" VerticalAlignment="Top" Width="243" Grid.Row="1" Source="/Pichur;component/Images/noimage.jpg" />
+		<GroupBox Grid.Row="1" Header="Properties" Height="107" HorizontalAlignment="Left" Margin="12,188,0,0" Name="imagePropsGBx" VerticalAlignment="Top" Width="243">
 			<Grid>
 				<TextBox Height="23" HorizontalAlignment="Right" Margin="0,6,6,0" Name="imgNameTxt" VerticalAlignment="Top" Width="145" />
 				<RichTextBox Height="40" HorizontalAlignment="Left" Margin="80,35,0,0" Name="messageRTxt" VerticalAlignment="Top" Width="145" />

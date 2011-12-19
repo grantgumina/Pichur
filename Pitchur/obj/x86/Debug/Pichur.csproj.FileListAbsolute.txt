@@ -23,7 +23,6 @@ C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pitchur\Pitchur\obj\x86\Deb
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pitchur\Pitchur\obj\x86\Debug\Pitchur.pdb
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\obj\x86\Debug\Interop.WIA.dll
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\obj\x86\Debug\Pichur.csproj.ResolveComReference.cache
-C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\bin\Debug\ImageCapture.exe
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\bin\Debug\Microsoft.Windows.Shell.dll
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\bin\Debug\RibbonControlsLibrary.dll
 C:\Users\Grant\Documents\Visual Studio 2010\Projects\Pichur\Pitchur\bin\Debug\ImageCapture.pdb

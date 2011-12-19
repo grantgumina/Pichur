@@ -27,7 +27,8 @@ namespace Pichur
 	public partial class MainWindow : RibbonWindow
 	{
 		private Boolean flag;
-		private FacebookClient client = new FacebookClient("ee052ba25aeb38b5554defbc87ea722f");
+		// add own token below
+		private FacebookClient client = new FacebookClient("");
 		private ImageGrabber grabber;
 		private IntPtr hwnd = IntPtr.Zero;
 	
@@ -38,7 +39,6 @@ namespace Pichur
 
 		public MainWindow()
 		{
-
 			temp[0] = new BitmapImage(new Uri(@"/Pichur;component/Images/Numbers/zero.png", UriKind.Relative));
 			temp[1] = new BitmapImage(new Uri(@"/Pichur;component/Images/Numbers/one.png", UriKind.Relative));
 			temp[2] = new BitmapImage(new Uri(@"/Pichur;component/Images/Numbers/two.png", UriKind.Relative));
@@ -54,6 +54,7 @@ namespace Pichur
 		private void RibbonWindow_Loaded(object sender, RoutedEventArgs e)
 		{
 			flag = false;
+			saveBtn.IsEnabled = false;
 		}
 
 		private void RibbonWindow_SourceInitialized(object sender, EventArgs e)
@@ -83,6 +84,11 @@ namespace Pichur
 		private void refreshBtn_Click(object sender, RoutedEventArgs e)
 		{
 			refreshImage();
+		}
+
+		private void e0RibBtn_Click(object sender, RoutedEventArgs e)
+		{
+			camImg.Effect = null;
 		}
 
 		private void e1RibBtn_Click(object sender, RoutedEventArgs e)
