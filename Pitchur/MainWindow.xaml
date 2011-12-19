@@ -1,0 +1,104 @@
+﻿<ribbon:RibbonWindow x:Class="Pichur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="Pichur"
+		x:Name="RibbonWindow"
+		Width="385" Height="533" SourceInitialized="RibbonWindow_SourceInitialized" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" BorderBrush="#FF270909" Loaded="RibbonWindow_Loaded" Background="#FFEDF3F9" KeyDown="RibbonWindow_KeyDown" Icon="/Pichur;component/Images/camera.png" MaxWidth="385" MinWidth="385" MinHeight="533" MaxHeight="533">
+	<Grid x:Name="LayoutRoot" Height="436" Background="#FFEDF3F9">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="154*" />
+			<ColumnDefinition Width="386*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+            <RowDefinition Height="105"/>
+			<RowDefinition Height="331*" />
+		</Grid.RowDefinitions>
+		<ribbon:Ribbon x:Name="Ribbon" Margin="-1,-40,1,5" Height="174" Grid.ColumnSpan="2">
+            <ribbon:Ribbon.ApplicationMenu>
+				<ribbon:RibbonApplicationMenu Visibility="Collapsed" SmallImageSource="Images\SmallIcon.png">
+					<ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"
+                                                      x:Name="MenuItem1"
+                                                      ImageSource="Images\LargeIcon.png"
+													  />
+				</ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:RibbonTab x:Name="EffectsTab" 
+                              Header="Effects">
+				<ribbon:RibbonGroup x:Name="ClassicGroup" 
+									Header="Classic">
+					<ribbon:RibbonGroup.GroupSizeDefinitions>
+						<ribbon:RibbonGroupSizeDefinitionBaseCollection>
+							<ribbon:RibbonGroupSizeDefinition>
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+							</ribbon:RibbonGroupSizeDefinition>
+						</ribbon:RibbonGroupSizeDefinitionBaseCollection>
+					</ribbon:RibbonGroup.GroupSizeDefinitions>
+					<ribbon:RibbonButton x:Name="e1RibBtn" LargeImageSource="Images\Effects\Grayscale.png" Label="B/W" Click="e1RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e9RibBtn" LargeImageSource="Images\Effects\OldMovie.png" Label="Old Movie" Click="e9RibBtn_Click" />
+				</ribbon:RibbonGroup>
+				<ribbon:RibbonGroup x:Name="ArtisticGroup" 
+									Header="Artistic">
+					<ribbon:RibbonGroup.GroupSizeDefinitions>
+						<ribbon:RibbonGroupSizeDefinitionBaseCollection>
+							<ribbon:RibbonGroupSizeDefinition>
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+							</ribbon:RibbonGroupSizeDefinition>
+						</ribbon:RibbonGroupSizeDefinitionBaseCollection>
+					</ribbon:RibbonGroup.GroupSizeDefinitions>
+					<ribbon:RibbonButton x:Name="e3RibBtn" LargeImageSource="Images\Effects\Invert.png" Label="Invert" Click="e3RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e4RibBtn" LargeImageSource="Images\Effects\ColorAdjust.png" Label="Contrast Adjust" Click="e4RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e5RibBtn" LargeImageSource="Images\Effects\Bloom.png" Label="Bloom" Click="e5RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e6RibBtn" LargeImageSource="Images\Effects\Gloom.png" Label="Gloom" Click="e6RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e13RibBtn" LargeImageSource="Images\Effects\Copier.png" Label="Copier" Click="e13RibBtn_Click" />
+				</ribbon:RibbonGroup>
+				<ribbon:RibbonGroup x:Name="DistortionGroup" 
+									Header="Distort">
+					<ribbon:RibbonGroup.GroupSizeDefinitions>
+						<ribbon:RibbonGroupSizeDefinitionBaseCollection>
+							<ribbon:RibbonGroupSizeDefinition>
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+								<ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+							</ribbon:RibbonGroupSizeDefinition>
+						</ribbon:RibbonGroupSizeDefinitionBaseCollection>
+					</ribbon:RibbonGroup.GroupSizeDefinitions>
+					<ribbon:RibbonButton x:Name="e7RibBtn" LargeImageSource="Images\Effects\Swirl.png" Label="Swirl" Click="e7RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e8RibBtn" LargeImageSource="Images\Effects\Pinch.png" Label="Pinch" Click="e8RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e10RibBtn" LargeImageSource="Images\Effects\Pixelate.png" Label="Pixelate" Click="e10RibBtn_Click" />
+					<ribbon:RibbonButton x:Name="e11RibBtn" LargeImageSource="Images\Effects\Ripple.png" Label="Ripple" Click="e11RibBtn_Click" />
+				</ribbon:RibbonGroup>
+			</ribbon:RibbonTab>
+				<ribbon:RibbonTab x:Name="DoneTab" Header="Save and Upload">
+					<ribbon:RibbonGroup x:Name="saveGroup">
+						<ribbon:RibbonButton x:Name="saveBtn" LargeImageSource="Images\save.png" Label="Save" Click="saveBtn_Click" />
+					</ribbon:RibbonGroup>
+					<ribbon:RibbonGroup x:Name="uploadGroup" Header="Upload">
+						<ribbon:RibbonButton x:Name="uploadBtn" LargeImageSource="Images\facebook.png" Label="Facebook" Click="uploadBtn_Click" />
+					</ribbon:RibbonGroup>
+			</ribbon:RibbonTab>
+		</ribbon:Ribbon>
+		<Button Grid.Row="1" Height="61" HorizontalAlignment="Left" Margin="136,270,0,0" Name="captureBtn" VerticalAlignment="Top" Width="90" Click="captureBtn_Click" Grid.ColumnSpan="2">
+			<Image x:Name="captureIcon" Source="Images/camera.png" />
+		</Button>
+		<Button Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="185,289,0,0" Name="refreshBtn" VerticalAlignment="Top" Width="58" Click="refreshBtn_Click" Grid.Column="1" Focusable="False">
+			<Image Source="Images/refresh.png" />
+		</Button>
+		<Border BorderBrush="Silver" BorderThickness="1" Grid.ColumnSpan="2" Grid.Row="1" Height="247" HorizontalAlignment="Left" Margin="18,12,0,0" Name="border1" VerticalAlignment="Top" Width="329">
+			<Image Name="camImg">
+				<Image.Source>
+					<BitmapImage UriSource="" />
+				</Image.Source>
+			</Image>
+		</Border>
+	</Grid>
+</ribbon:RibbonWindow>
