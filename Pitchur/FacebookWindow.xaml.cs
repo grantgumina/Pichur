@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,7 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-using System.Runtime.InteropServices;
 using Facebook;
 using Pichur;
 
@@ -24,11 +22,8 @@ namespace Pichur
 	/// </summary>
 	public partial class FacebookWindow : Window
 	{
-		[DllImport("wininet.dll", SetLastError = true)]
-		private static extern bool InternetSetOption(IntPtr hInternet, int dwOption, IntPtr lpBuffer, int lpdwBufferLength);
-
 		private string appId = "204899734342";
-		private string[] extendedPermissions = new[] { "publish_stream", "offline_access", "user_photos" };
+		private string[] extendedPermissions = new[] { "publish_stream", "user_photos" };
 		private FacebookOAuthClient client;
 		private Dictionary<string, object> parameters;
 		private Uri navigateUrl;
@@ -55,9 +50,9 @@ namespace Pichur
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			formWebBrowser.Navigate("javascript:void((function(){var a,b,c,e,f;f=0;a=document.cookie.split('; ');for(e=0;e<a.length&&a[e];e++){f++;for(b='.'+location.host;b;b=b.replace(/^(?:%5C.|[^%5C.]+)/,'')){for(c=location.pathname;c;c=c.replace(/.$/,'')){document.cookie=(a[e]+'; domain='+b+'; path='+c+'; expires='+new Date((new Date()).getTime()-1e11).toGMTString());}}}})())");
 			formWebBrowser.Navigate(this.navigateUrl);
 		}
+
 		public FacebookOAuthResult FacebookOAuthResult { get; private set; }
 
 		private void formWebBrowser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
